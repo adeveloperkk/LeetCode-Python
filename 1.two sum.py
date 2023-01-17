@@ -1,11 +1,12 @@
-def twoSum(nums, target):
+#credit(https://github.com/adeveloperkk/LeetCode-Python)
+#17jan'2023
+class Solution(object):
+    def twoSum(self,nums, target):
         dic={}
         for i in range(len(nums)):
-            dic[i]=nums[i]
-        print(dic)
-       #     for j in range(len(dic)):
-          #      print(dic[j]+)
-
-a=list(input(""))
-b=int(input(""))
-print(twoSum(a,b))
+            if target-nums[i] in dic:
+                return [dic[target - nums[i]],i]
+            else:
+                dic[nums[i]]=i
+                
+                
